@@ -163,12 +163,10 @@ main > h2 {
 }
 
 .resources-card ul {
-    padding-left: 40px;
-    list-style-position: inside;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  list-style: disc;
+  padding: 30px 40px;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .resources-card li {

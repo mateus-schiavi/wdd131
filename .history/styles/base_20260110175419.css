@@ -8,9 +8,9 @@ body {
   font-family: 'Ancizar Serif', Georgia, serif;
   background-color: #f5f5f5;
   line-height: 1.6;
-  font-size: 20px;
 }
 
+/* Header */
 header {
   background-color: #2c5f7c;
   color: white;
@@ -62,7 +62,7 @@ main > h2 {
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
@@ -163,12 +163,10 @@ main > h2 {
 }
 
 .resources-card ul {
-    padding-left: 40px;
-    list-style-position: inside;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  list-style: disc;
+  padding: 30px 40px;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .resources-card li {

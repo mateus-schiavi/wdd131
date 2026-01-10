@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-dark: #1f4e6d;
+    --blue-medium: #2f6f95;
+    --gray-dark: #333;
+    --gray-light: #f4f4f4;
+    --border-color: #ccc;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Ancizar Serif", serif;
+    background-color: var(--blue-dark);
+    color: #000;
+}
+
+header {
+    background-color: var(--blue-medium);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--gray-dark);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7rem 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 6px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.card h2 {
+    background-color: var(--blue-medium);
+    color: var(--white);
+    text-align: center;
+    padding: 0.6rem;
+}
+
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card p {
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+.card img {
+    display: block;
+    max-width: 150px;
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+.card a {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: blue;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--blue-medium);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.about-content p {
+    flex: 2;
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 150px;
+    height: auto;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.country {
+    padding: 1rem;
+}
+
+.country h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.country hr {
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Layout bandeira + texto */
+.country-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.country figure {
+    text-align: center;
+}
+
+.country img {
+    width: 120px;
+    border: 1px solid var(--border-color);
+}
+
+.country figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.4rem;
+}
+
+.country p {
+    line-height: 1.6;
+}

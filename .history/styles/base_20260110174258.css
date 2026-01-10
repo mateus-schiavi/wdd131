@@ -8,9 +8,9 @@ body {
   font-family: 'Ancizar Serif', Georgia, serif;
   background-color: #f5f5f5;
   line-height: 1.6;
-  font-size: 20px;
 }
 
+/* Header */
 header {
   background-color: #2c5f7c;
   color: white;
@@ -19,27 +19,32 @@ header {
 }
 
 #course-title {
+  display: block;
   font-size: 1.5rem;
+  margin-bottom: 15px;
   font-weight: normal;
-  margin: 0;
 }
 
 /* Navigation */
 nav {
   background-color: #333;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 0;
   flex-wrap: wrap;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 25px;
   display: block;
   transition: background-color 0.3s;
-  flex: 1;
-  text-align: center;
+  border-right: 1px solid #555;
+}
+
+nav a:last-child {
+  border-right: none;
 }
 
 nav a:hover {
@@ -51,54 +56,49 @@ main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
-}
-
-main > h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.content-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 /* Card Sections */
 .card {
   background-color: white;
   border-radius: 8px;
+  padding: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-.card h3 {
+.card h2 {
   background-color: #2c5f7c;
   color: white;
   padding: 15px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 0;
-  font-weight: normal;
 }
 
-/* About Me Card */
-.about-card .about-content {
+/* About Me Section */
+.about-content {
   padding: 25px;
   display: flex;
   gap: 20px;
   align-items: flex-start;
 }
 
-.text-content {
+.about-content p {
   flex: 1;
-}
-
-.text-content p {
   color: #333;
-  text-align: left;
+  text-align: justify;
 }
 
 .about-content img {
@@ -106,33 +106,38 @@ main > h2 {
   height: auto;
   border: 3px solid #2c5f7c;
   border-radius: 4px;
-  flex-shrink: 0;
 }
 
 /* Country Section */
 .country {
   padding: 25px;
-  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
 }
 
-.country h4 {
+.country h3 {
   text-align: center;
   color: #2c5f7c;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.country hr {
+  border: none;
+  border-top: 2px solid #2c5f7c;
+  margin: 15px auto;
+  width: 80%;
 }
 
 .country-content {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .country-content figure {
   text-align: center;
   margin: 0;
-  flex-shrink: 0;
 }
 
 .country-content figure img {
@@ -152,41 +157,38 @@ main > h2 {
 .country-content p {
   flex: 1;
   color: #333;
-  text-align: left;
+  text-align: justify;
 }
 
-/* Web Dev Resources Card */
-.resources-card {
-  align-self: stretch;
+/* Web Dev Resources Section */
+.card:last-of-type {
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
-.resources-card ul {
-    padding-left: 40px;
-    list-style-position: inside;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.resources-card li {
-  margin-bottom: 12px;
-}
-
-.resources-card li:last-child {
-  margin-bottom: 0;
-}
-
-.resources-card a {
+.card a {
+  padding: 15px 25px;
   color: #0066cc;
-  text-decoration: underline;
-  transition: color 0.2s;
+  text-decoration: none;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
 }
 
-.resources-card a:hover {
-  color: #004499;
+.card a:last-child {
+  border-bottom: none;
+}
+
+.card a:hover {
+  background-color: #f0f7ff;
+  text-decoration: underline;
+}
+
+.card a::before {
+  content: "• ";
+  color: #2c5f7c;
+  font-weight: bold;
+  margin-right: 8px;
 }
 
 /* Footer */
@@ -208,18 +210,17 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-  .content-wrapper {
+@media (max-width: 768px) {
+  main {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 768px) {
+  
   nav {
     flex-direction: column;
   }
   
   nav a {
+    border-right: none;
     border-bottom: 1px solid #555;
   }
   
@@ -229,12 +230,11 @@ footer p {
   
   .about-content {
     flex-direction: column;
-    align-items: center !important;
     text-align: center;
   }
   
-  .text-content p {
-    text-align: center !important;
+  .about-content img {
+    margin: 0 auto;
   }
   
   .country-content {
@@ -242,11 +242,7 @@ footer p {
     text-align: center;
   }
   
-  .country-content p {
-    text-align: center !important;
-  }
-  
-  main > h2 {
+  h1 {
     font-size: 1.5rem;
   }
 }

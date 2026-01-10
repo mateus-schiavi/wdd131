@@ -163,8 +163,6 @@ main > h2 {
 }
 
 .resources-card ul {
-    padding-left: 40px;
-    list-style-position: inside;
     display: flex;
     flex-direction: column;
     justify-content: center;
