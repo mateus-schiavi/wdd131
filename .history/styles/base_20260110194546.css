@@ -168,7 +168,7 @@ main > h1 {
 .country-content figcaption {
   font-size: 0.85rem;
   font-style: italic;
-  color: var(--color-text-light);
+  color: #666;
 }
 
 .country-content p {
@@ -200,7 +200,7 @@ main > h1 {
 }
 
 .resources-card a {
-  color: var(--color-link-hover);
+  color: #0066cc;
   text-decoration: underline;
   transition: color 0.2s;
 }
@@ -211,7 +211,7 @@ main > h1 {
 }
 
 footer {
-  background-color: var(--color-primary);
+  background-color: #2c5f7c;
   color: white;
   text-align: center;
   padding: 20px;
@@ -224,7 +224,7 @@ footer p {
 
 #lastModified {
   font-size: 0.9rem;
-  color: var(--color-accent);
+  color: #ffd700;
 }
 
 @media (max-width: 900px) {
