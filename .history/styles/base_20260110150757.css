@@ -59,7 +59,7 @@ main {
 
 main h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: rem;
 }
 
 .card {
@@ -104,18 +104,3 @@ main h1 {
     color: blue;
 }
 
-.card a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: var(--blue-medium);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin: 0.3rem 0;
-}
