@@ -24,13 +24,15 @@ header h1 {
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     margin-top: 0.5rem;
 }
 
 nav a {
     color: #ecf0f1;
     text-decoration: none;
-    margin: 0 0.8rem;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -69,7 +71,7 @@ figure:hover {
 
 figure img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -90,4 +92,24 @@ footer {
 footer p {
     margin: 0.3rem 0;
     font-size: 0.9rem;
+}
+
+.temples-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.temples-container figure {
+    margin: 0;
+    display: block;
+}
+
+.temples-container figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 0 0;
 }
