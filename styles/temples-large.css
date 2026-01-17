@@ -1,0 +1,25 @@
+.temples-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    figure {
+        width: calc(33% - 1rem);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    figure {
+        width: calc(25% - 1rem);
+    }
+}
