@@ -1,55 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Mateus de Sousa Schiavi</title>
-    <meta name="author" content="Mateus de Sousa Schiavi">
-    <meta name="description" content="WDD 131 - My City - Mateus de Sousa Schiavi">
-    <link rel="stylesheet" href="place.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-        <script src="scripts/place.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD 131 – Suzano, Brazil | Mateus de Sousa Schiavi</title>
+
+  <meta
+    name="description"
+    content="An informational page about Suzano, Brazil, including geographic data, population details, and current weather conditions."
+  >
+
+  <meta name="author" content="Mateus de Sousa Schiavi">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
-        Suzano, São Paulo, Brasil
-    </header>
 
-    <main class="hero">
-        <section class card left>
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong>206 km²</li>
-                <li><strong>Population:</strong>307.43 thousand</li>
-                <li><strong>Languages:</strong>Portuguese</li>
-                <li><strong>Currency:</strong>Brazilian Real</li>
-                <li><strong>Time Zone:</strong>206 km²</li>
-                <li><strong>Area:</strong>BRT (UTC -3)</li>
-                <li><strong>Calling Code:</strong>+55</li>
-                <li><strong>Internet TLD:</strong>.br</li>
-            </ul>
-        </section>
+  <header>
+    <h1>Suzano</h1>
+  </header>
 
-        <section class="card right">
-            <h2>Weather 🌤️</h2>
-            <ul>
-                <li><strong>Temperature</strong>00 ºC</li>
-                <li><strong>Condition</strong>Cloudy</li>
-                <li><strong>Wind</strong>0 km/h</li>
-                <li><strong>Sensation</strong>0 ºC</li>
-            </ul>
-        </section>
-    </main>
+  <main>
+    <section class="hero full-width">
 
-    <footer class="footer">
-        <p>&copy; <span id="year"></span>Mateus de Sousa Schiavi, Suzano, São Paulo - Brazil</p>
-        <p>Last modified: <span id="last-modified"></span></p>
-    </footer>
+      <img src="images/my_city.webp" alt="View of Suzano City"
+      >
+
+      <section class="card city-data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Country:</strong> Brazil</li>
+          <li><strong>State:</strong> São Paulo</li>
+          <li><strong>Population:</strong> 307,000</li>
+          <li><strong>Area:</strong> 206 km²</li>
+          <li><strong>Time Zone:</strong> BRT (UTC-3)</li>
+        </ul>
+      </section>
+
+      <section class="card weather">
+        <h2>Weather ☀️</h2>
+        <p>Temperature: <span id="temp"></span> °C</p>
+        <p>Conditions: <span id="conditions"></span></p>
+        <p>Wind: <span id="wind"></span> km/h</p>
+        <p>Wind Chill: <span id="wind-chill"></span></p>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Mateus de Sousa Schiavi</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
 </body>
-
 </html>

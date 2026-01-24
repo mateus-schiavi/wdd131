@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #c4161c;
+  --secondary-color: #1e7f4f;
+  --text-color: #222;
+  --bg-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header::after {
+  content: "";
+  display: none;
+  height: 4px;
+  background-color: var(--secondary-color);
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  position: relative;
+}
+
+/* Hero image (from HTML) */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  position: absolute;
+  top: 2rem;
+  background-color: rgb(255 255 255 / 0.85);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  max-width: 320px;
+}
+
+.card h2 {
+  background-color: #fdd835;
+  padding: 0.5rem;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* Data card — left */
+.city-data {
+  left: 2rem;
+}
+
+.city-data ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.city-data li {
+  margin-bottom: 0.4rem;
+}
+
+/* Weather card — right */
+.weather {
+  right: 2rem;
+  top: 38rem;
+}
+
+/* ==============s=======
+   MAIN CONTENT
+===================== */
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* =====================
+   MEDIA QUERY
+===================== */
+@media (max-width: 768px) {
+  .card {
+    position: static;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+}
