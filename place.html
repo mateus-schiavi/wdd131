@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WDD 131 – Suzano, Brazil | Mateus de Sousa Schiavi</title>
+  <title>WDD 131 – Suzano, Brazil | Mateus Schiavi</title>
 
   <meta
     name="description"
-    content="An informational page about Suzano, São Paulo - Brazil, including geographic data, population details, and current weather conditions."
+    content="This page presents information about Suzano, São Paulo, Brazil, including population data, geographic details, and current local weather conditions."
   >
 
   <meta name="author" content="Mateus de Sousa Schiavi">
@@ -27,16 +27,18 @@
 <body>
 
   <header>
-    <h1>Suzano</h1>
+    <h1>Suzano, São Paulo - Brazil</h1>
   </header>
 
   <main>
-    <section class="hero full-width">
+    <div class="hero full-width">
 
-      <img src="images/my_city.webp" alt="View of Suzano City"
+      <img
+        src="images/suzano.webp"
+        alt="View of Suzano City"
       >
 
-      <section class="card city-data">
+      <div class="card city-data">
         <h2>Data</h2>
         <ul>
           <li><strong>Country:</strong> Brazil</li>
@@ -45,17 +47,26 @@
           <li><strong>Area:</strong> 206 km²</li>
           <li><strong>Time Zone:</strong> BRT (UTC-3)</li>
         </ul>
-      </section>
+      </div>
 
-      <section class="card weather">
-        <h2>Weather ☀️</h2>
+      <div class="card weather">
+        <h2 class="weather-title">
+          Weather
+          <img
+            src="images/weather_icon.svg"
+            alt=""
+            aria-hidden="true"
+            class="weather-icon"
+          >
+        </h2>
+
         <p>Temperature: <span id="temp"></span> °C</p>
         <p>Conditions: <span id="conditions"></span></p>
         <p>Wind: <span id="wind"></span> km/h</p>
         <p>Wind Chill: <span id="wind-chill"></span></p>
-      </section>
+      </div>
 
-    </section>
+    </div>
   </main>
 
   <footer>

@@ -15,6 +15,9 @@ body {
   color: var(--text-color);
 }
 
+/* =====================
+   HEADER
+===================== */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -40,8 +43,8 @@ header::after {
   position: relative;
 }
 
-/* Hero image (from HTML) */
-.hero img {
+/* Apenas a imagem principal da hero */
+.hero > img {
   width: 100%;
   height: auto;
   display: block;
@@ -67,7 +70,9 @@ header::after {
   font-size: 1.1rem;
 }
 
-/* Data card — left */
+/* =====================
+   DATA CARD — LEFT
+===================== */
 .city-data {
   left: 2rem;
 }
@@ -82,13 +87,28 @@ header::after {
   margin-bottom: 0.4rem;
 }
 
-/* Weather card — right */
+/* =====================
+   WEATHER CARD — RIGHT / BOTTOM
+===================== */
 .weather {
   right: 2rem;
   top: 38rem;
 }
 
-/* ==============s=======
+.weather-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* =====================
    MAIN CONTENT
 ===================== */
 main {
@@ -100,6 +120,9 @@ main {
   width: 100%;
 }
 
+/* =====================
+   FOOTER
+===================== */
 footer {
   background-color: var(--primary-color);
   color: white;
