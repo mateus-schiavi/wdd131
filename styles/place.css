@@ -7,12 +7,14 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 /* =====================
@@ -29,38 +31,34 @@ header h1 {
   margin: 0;
 }
 
-header::after {
-  content: "";
-  display: none;
-  height: 4px;
-  background-color: var(--secondary-color);
-}
-
 /* =====================
-   HERO SECTION
+   HERO SECTION - FULLSCREEN
 ===================== */
 .hero {
+  width: 100%;
+  height: 100vh; /* ocupa toda a altura da tela */
+  overflow: hidden;
   position: relative;
 }
 
-/* Apenas a imagem principal da hero */
-.hero > img {
+.hero > img.hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 /* =====================
-   CARDS
+   CARDS - DESKTOP
 ===================== */
 .card {
   position: absolute;
-  top: 2rem;
-  background-color: rgb(255 255 255 / 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   max-width: 320px;
+  z-index: 10;
 }
 
 .card h2 {
@@ -68,31 +66,23 @@ header::after {
   padding: 0.5rem;
   margin-top: 0;
   font-size: 1.1rem;
+  border-radius: 4px 4px 0 0;
 }
-
-/* =====================
-   DATA CARD — LEFT
-===================== */
-.city-data {
-  left: 2rem;
-}
-
 .city-data ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.city-data li {
-  margin-bottom: 0.4rem;
+
+.city-data {
+  left: 2rem;
+  top: 2rem;
 }
 
-/* =====================
-   WEATHER CARD — RIGHT / BOTTOM
-===================== */
 .weather {
   right: 2rem;
-  top: 38rem;
+  top: 36rem;
 }
 
 .weather-title {
@@ -100,7 +90,6 @@ header::after {
   align-items: center;
   gap: 0.4rem;
 }
-
 
 .weather-icon {
   width: 30px;
@@ -131,12 +120,24 @@ footer {
 }
 
 /* =====================
-   MEDIA QUERY
+   MEDIA QUERIES - TABLETS E CELULAR
 ===================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  /* move cards para dentro do fluxo */
   .card {
     position: static;
-    max-width: 100%;
+    max-width: 90%;
     margin: 1rem auto;
+  }
+
+  .hero {
+    height: auto; /* altura automática para telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 95%;
+    margin: 0.5rem auto;
   }
 }

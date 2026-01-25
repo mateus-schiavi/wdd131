@@ -1,82 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WDD 131 – Suzano, Brazil | Mateus Schiavi</title>
+    <title>WDD 131 – Suzano, Brazil | Mateus Schiavi</title>
 
-  <meta
-    name="description"
-    content="This page presents information about Suzano, São Paulo, Brazil, including population data, geographic details, and current local weather conditions."
-  >
+    <meta name="description"
+        content="This page presents information about Suzano, São Paulo, Brazil, including population data, geographic details, and current local weather conditions.">
 
-  <meta name="author" content="Mateus de Sousa Schiavi">
+    <meta name="author" content="Mateus de Sousa Schiavi">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/place.css">
-  <script src="scripts/place.js" defer></script>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Suzano, São Paulo - Brazil</h1>
-  </header>
+    <header>
+        <h1>Suzano, São Paulo - Brazil</h1>
+    </header>
 
-  <main>
-    <div class="hero full-width">
+    <main>
+        <div class="hero full-width">
+            <img src="images/suzano.webp" srcset="
+      images/suzano-small.webp 960w,
+      images/suzano.webp 1280w" sizes="(max-width: 960px) 100vw, 1280px" alt="View of Suzano City" class="hero-img">
 
-      <img
-        src="images/suzano.webp"
-        srcset="images/suzano.webp 1280w,
-        images/suzano-small.webp 960w"
+            <div class="card city-data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Country:</strong> Brazil</li>
+                    <li><strong>State:</strong> São Paulo</li>
+                    <li><strong>Population:</strong> 307,000</li>
+                    <li><strong>Area:</strong> 206 km²</li>
+                    <li><strong>Time Zone:</strong> BRT (UTC-3)</li>
+                </ul>
+            </div>
 
-        sizes="100vw"
-        alt="View of Suzano City"
-      >
+            <div class="card weather">
+                <h2 class="weather-title">
+                    Weather
+                    <img src="images/weather_icon.svg" alt="Weather Icon" aria-hidden="true" class="weather-icon">
+                </h2>
+                <p>Temperature: <span id="temp"></span> °C</p>
+                <p>Conditions: <span id="conditions"></span></p>
+                <p>Wind: <span id="wind"></span> km/h</p>
+                <p>Wind Chill: <span id="wind-chill"></span></p>
+            </div>
+        </div>
 
-      <div class="card city-data">
-        <h2>Data</h2>
-        <ul>
-          <li><strong>Country:</strong> Brazil</li>
-          <li><strong>State:</strong> São Paulo</li>
-          <li><strong>Population:</strong> 307,000</li>
-          <li><strong>Area:</strong> 206 km²</li>
-          <li><strong>Time Zone:</strong> BRT (UTC-3)</li>
-        </ul>
-      </div>
+    </main>
 
-      <div class="card weather">
-        <h2 class="weather-title">
-          Weather
-          <img
-            src="images/weather_icon.svg"
-            alt="Weather Icon"
-            aria-hidden="true"
-            class="weather-icon"
-          >
-        </h2>
-
-        <p>Temperature: <span id="temp"></span> °C</p>
-        <p>Conditions: <span id="conditions"></span></p>
-        <p>Wind: <span id="wind"></span> km/h</p>
-        <p>Wind Chill: <span id="wind-chill"></span></p>
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="currentYear"></span> Mateus de Sousa Schiavi</p>
-    <p>Last Modification: <span id="lastModified"></span></p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mateus de Sousa Schiavi</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
 
 </body>
+
 </html>
