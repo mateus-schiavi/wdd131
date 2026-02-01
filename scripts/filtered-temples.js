@@ -72,3 +72,68 @@ const temples = [
     "https://churchofjesuschristtemples.org/assets/img/temples/rio-de-janeiro-brazil-temple/rio-de-janeiro-brazil-temple-8167-main.jpg"
   }
 ];
+
+const container = document.querySelector(".temple-grid");
+
+function displayTemples(templeList) {
+    container.innerHTML = "";
+
+    templeList.forEach(temple => {
+        const card = document.createElement("section");
+
+        const name = document.createElement("h3");
+        name.textContent = temple.templeName;
+
+        const location = document.createElement("h3");
+        location.textContent = `Location: ${temple.location}`;
+
+        const dedicated = document.createElement("p");
+        dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+
+        const area = document.createElement("p");
+        area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+
+        const img = document.createElement("img");
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
+
+        card.append(img, name, location, dedicated, area);
+        container.appendChild(card);
+    });
+}
+
+function filterOld() {
+    displayTemples(
+        temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)
+    );
+}
+
+function filterNew() {
+    displayTemples(
+        temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)
+    );
+}
+
+function filterLarge() {
+    displayTemples(
+        temples.filter(t => t.area > 90000)
+    );
+}
+
+function filterSmall() {
+    displayTemples(
+        temples.filter(t => t.area < 10000)
+    );
+}
+
+document.querySelector("#home").addEventListener("click", () => {
+    displayTemples(temples)
+});
+
+document.querySelector("#old").addEventListener("click", filterOld);
+document.querySelector("#new").addEventListener("click", filterNew);
+document.querySelector("#large").addEventListener("click", filterLarge);
+document.querySelector("#small").addEventListener("click", filterSmall);
+
+displayTemples(temples);
