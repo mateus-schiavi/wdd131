@@ -1,111 +1,114 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Product Review</title>
+    <title>Product Review</title>
 
-  <meta name="description" content="Submit a detailed product review including rating, features, and written feedback.">
-  <meta name="author" content="Mateus Schiavi">
+    <meta name="description"
+        content="Submit a detailed product review including rating, features, and written feedback.">
+    <meta name="author" content="Mateus Schiavi">
 
-  <link rel="stylesheet" href="styles/products.css">
-  <script src="scripts/review-products.js" defer></script>
+    <link rel="stylesheet" href="styles/products.css">
+    <script src="scripts/review-products.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
 
-<header>
-  <h1>Product Review</h1>
-</header>
+    <header>
+        <h1>Product Review</h1>
+    </header>
 
-<main class="card">
+    <main class="card">
 
-  <form id="reviewForm" method="get" action="review.html">
+        <form id="reviewForm" method="get" action="review.html">
 
-    <!-- Product -->
-    <label for="product">Product Name</label>
-    <select id="product" name="product" required>
-      <option value="" disabled selected>Select a Product ...</option>
-    </select>
+            <!-- Product -->
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
 
-    <!-- Rating -->
-    <fieldset>
-      <legend>Overall Rating</legend>
+            <!-- Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
 
-      <label for="rate1">
-        <input type="radio" id="rate1" name="rating" value="1" required>
-        ★
-      </label>
+                <label for="rate1">
+                    <input type="radio" id="rate1" name="rating" value="1" required>
+                    ★
+                </label>
 
-      <label for="rate2">
-        <input type="radio" id="rate2" name="rating" value="2" required>
-        ★★
-      </label>
+                <label for="rate2">
+                    <input type="radio" id="rate2" name="rating" value="2" required>
+                    ★★
+                </label>
 
-      <label for="rate3">
-        <input type="radio" id="rate3" name="rating" value="3" required>
-        ★★★
-      </label>
+                <label for="rate3">
+                    <input type="radio" id="rate3" name="rating" value="3" required>
+                    ★★★
+                </label>
 
-      <label for="rate4">
-        <input type="radio" id="rate4" name="rating" value="4" required>
-        ★★★★
-      </label>
+                <label for="rate4">
+                    <input type="radio" id="rate4" name="rating" value="4" required>
+                    ★★★★
+                </label>
 
-      <label for="rate5">
-        <input type="radio" id="rate5" name="rating" value="5" required>
-        ★★★★★
-      </label>
-    </fieldset>
+                <label for="rate5">
+                    <input type="radio" id="rate5" name="rating" value="5" required>
+                    ★★★★★
+                </label>
+            </fieldset>
 
-    <!-- Date -->
-    <label for="date">Date of Installation</label>
-    <input type="date" id="date" name="installation-date" required>
+            <!-- Date -->
+            <label for="date">Date of Installation</label>
+            <input type="date" id="date" name="installation-date" required>
 
-    <!-- Features -->
-    <fieldset>
-      <legend>Which features did you find useful? (Check all that apply)</legend>
+            <!-- Features -->
+            <fieldset>
+                <legend>Which features did you find useful? (Check all that apply)</legend>
 
-      <label for="durability">
-        <input type="checkbox" id="durability" name="features" value="Durability">
-        Durability
-      </label>
+                <label for="durability">
+                    <input type="checkbox" id="durability" name="features" value="Durability">
+                    Durability
+                </label>
 
-      <label for="ease">
-        <input type="checkbox" id="ease" name="features" value="Ease of Use">
-        Ease of Use
-      </label>
+                <label for="ease">
+                    <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                    Ease of Use
+                </label>
 
-      <label for="performance">
-        <input type="checkbox" id="performance" name="features" value="Performance">
-        Performance
-      </label>
+                <label for="performance">
+                    <input type="checkbox" id="performance" name="features" value="Performance">
+                    Performance
+                </label>
 
-      <label for="design">
-        <input type="checkbox" id="design" name="features" value="Design">
-        Design
-      </label>
-    </fieldset>
+                <label for="design">
+                    <input type="checkbox" id="design" name="features" value="Design">
+                    Design
+                </label>
+            </fieldset>
 
-    <!-- Review -->
-    <label for="comment">Written Review (Optional)</label>
-    <textarea id="comment" name="comment"></textarea>
+            <!-- Review -->
+            <label for="comment">Written Review (Optional)</label>
+            <textarea id="comment" name="comment"></textarea>
 
-    <!-- Name -->
-    <label for="name">Your Name (Optional)</label>
-    <input type="text" id="name" name="username">
+            <!-- Name -->
+            <label for="name">Your Name (Optional)</label>
+            <input type="text" id="name" name="username">
 
-    <button type="submit">Post Review</button>
+            <button type="submit">Post Review</button>
 
-  </form>
+        </form>
 
-</main>
+    </main>
 
-<footer>
-  ©2024 🌸 Rubia Magdelena Francesco 🌸 Madagascar<br>
-  Last Modification: 02/26/2024 13:56:10
-</footer>
-
+    <footer>
+        <p><span id="currentYear"></span></p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
