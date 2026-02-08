@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const products = [
     { id: 1, name: "Smartphone" },
     { id: 2, name: "Laptop" },
-    { id: 3, name: "Headphones" }
+    { id: 3, name: "Headphones" },
+    { id: 4, name: "Keyboards"},
+    { id: 5, name: "SSD"},
+    { id: 6, name: "HDD"},
+    { id: 7, name: "Mousepad"},
+    { id: 8, name: "USB drive"}
   ];
 
   const productSelect = document.getElementById("product");
