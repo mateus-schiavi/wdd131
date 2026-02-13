@@ -17,89 +17,75 @@
 
 <body>
     <header>
-        <h1>Capoeira Roots</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#join">Join</a></li>
-            </ul>
-        </nav>
+        <div class="container header-flex">
+            <h1>Capoeira Roots</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <section class="hero">
+        <div class="container">
+            <h2>Discover the Art of Capoeira</h2>
+            <p>
+                Capoeira blends martial arts, dance, music, and culture into one powerful experience.
+            </p>
+        </div>
+    </section>
 
-        <section class="hero">
-            <div class="container">
-                <h2>The Art of Capoeira</h2>
-                <p>A Brazilian cultural expression combining martial arts, mucis, and movement</p>
-                <img src="images/hero.jpg" alt="Capoeira players performing in a roda" loading="lazy">
-            </div>
-        </section>
 
-        <section id="about" class="container">
-            <h2>About Capoeira</h2>
-            <p>Capoeira originated in Brazil among enslaved Africans. It blends combat, dance, acrobatics, and music
-                into a powerful cultural practice.</p>
-            <img src="images/roda.jpg" alt="Traditional capoeira roda in Brazil" loading="lazy">
-        </section>
+    <section>
+        <div class="container">
+            <img src="images/roda.jpg" alt="Capoeira circle performing in a roda">
+        </div>
+    </section>
 
-        <section id="benefits" class="container">
-            <h2>Beneftis</h2>
-            <div class="grid">
-                <article>
-                    <h3>Physical Fitness</h3>
-                    <p>Improves strength, flexibility, and endurance.</p>
-                </article>
-                <article>
-                    <h3>Mental Focus</h3>
-                    <p>Enhances coordination and strategic thinking.</p>
-                </article>
-                <article>
-                    <h3>Cultural Awareness</h3>
-                    <p>Connects practicioners to Brazilian history and music.</p>
-                </article>
-            </div>
-            <img src="images/berimbau.jpg" alt="Berimbau instrument used in capoeira" loading="lazy">
-        </section>
+    <section class="history">
+        <div class="container">
+            <h2>The History of Capoeira</h2>
 
-        <section id="quiz" class="container">
-            <h2>Capoeira Quiz</h2>
-            <button id="startQuiz">Start Quiz</button>
-            <div id="quizContainer"></div>
-            <div id="quizResult"></div>
-        </section>
+            <p>
+                Capoeira originated in Brazil during the 16th century among enslaved Africans brought by Portuguese
+                colonizers.
+                It developed as a unique form of resistance that blended combat techniques with music, rhythm, and
+                expressive movement.
+                By disguising martial training as dance, practitioners preserved their cultural traditions while
+                preparing for self-defense.
+            </p>
 
-        <section id="join" class="container">
-            <h2>Join Our Community</h2>
+            <p>
+                Over time, capoeira evolved into a powerful symbol of resilience, freedom, and Afro-Brazilian identity.
+                After being criminalized in the 19th century, it was later recognized as an important cultural practice
+                and eventually gained international recognition.
+            </p>
 
-            <form id="signupForm">
-                <fieldset>
-                    <legend>Registration Form</legend>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" required>
+            <p>
+                Music plays a central role in capoeira. Traditional instruments include the <strong>berimbau</strong>,
+                which leads the rhythm of the game,
+                the <strong>atabaque</strong> (a tall hand drum), the <strong>pandeiro</strong> (tambourine), the
+                <strong>agogô</strong> (double bell),
+                and the <strong>reco-reco</strong> (percussion scraper). Together, these instruments create the rhythm
+                that guides the movements inside the roda.
+            </p>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+            <p>
+                Today, capoeira is practiced worldwide as both a martial art and a cultural expression, preserving its
+                historical roots while continuing to evolve across generations.
+            </p>
+        </div>
+    </section>
 
-                    <label for="level">Experience Level</label>
-                    <select id="level" name="level">
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
 
-                    <button type="submit">Register</button>
-                </fieldset>
-            </form>
-
-            <p id="welcomeMessage"></p>
-        </section>
-    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Capoeira Roots</p>
+        <p><span id="currentYear"></span></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
