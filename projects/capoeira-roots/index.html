@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateus de Sousa Schiavi">
+    <meta name="description"
+        content="Capoeira Roots explores the history, culture, and benefits of capoeira. Test your knowledge and join our community today.">
+    <title>Capoeira Roots</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Capoeira Roots</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h2>The Art of Capoeira</h2>
+                <p>A Brazilian cultural expression combining martial arts, mucis, and movement</p>
+                <img src="images/hero.jpg" alt="Capoeira players performing in a roda" loading="lazy">
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Capoeira</h2>
+            <p>Capoeira originated in Brazil among enslaved Africans. It blends combat, dance, acrobatics, and music
+                into a powerful cultural practice.</p>
+            <img src="images/roda.jpg" alt="Traditional capoeira roda in Brazil" loading="lazy">
+        </section>
+
+        <section id="benefits" class="container">
+            <h2>Beneftis</h2>
+            <div class="grid">
+                <article>
+                    <h3>Physical Fitness</h3>
+                    <p>Improves strength, flexibility, and endurance.</p>
+                </article>
+                <article>
+                    <h3>Mental Focus</h3>
+                    <p>Enhances coordination and strategic thinking.</p>
+                </article>
+                <article>
+                    <h3>Cultural Awareness</h3>
+                    <p>Connects practicioners to Brazilian history and music.</p>
+                </article>
+            </div>
+            <img src="images/berimbau.jpg" alt="Berimbau instrument used in capoeira" loading="lazy">
+        </section>
+
+        <section id="quiz" class="container">
+            <h2>Capoeira Quiz</h2>
+            <button id="startQuiz">Start Quiz</button>
+            <div id="quizContainer"></div>
+            <div id="quizResult"></div>
+        </section>
+
+        <section id="join" class="container">
+            <h2>Join Our Community</h2>
+
+            <form id="signupForm">
+                <fieldset>
+                    <legend>Registration Form</legend>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="level">Experience Level</label>
+                    <select id="level" name="level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+
+                    <button type="submit">Register</button>
+                </fieldset>
+            </form>
+
+            <p id="welcomeMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Capoeira Roots</p>
+    </footer>
+</body>
+
+</html>

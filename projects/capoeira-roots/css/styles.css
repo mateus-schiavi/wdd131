@@ -1,0 +1,120 @@
+:root {
+    --primary: #1b5e20;
+    --secondary: #fbc02d;
+    --light: #f5f5f5;
+    --dark: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 2rem 0;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: var(--secondary);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+article {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+form {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
